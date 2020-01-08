@@ -13,7 +13,7 @@ local RS="$(tput sgr0)"
 [[ ${(k)args_and_flags} = '-h' ]] && {
   cat << EOF
 ${YELLOW}USAGE:${RS}
-     k [-a [<dir>]] [-f] [<query>] [-h]
+     k [-a [<dir>]] | [-f] [<query>] | [-h]
 
 ${YELLOW}FLAGS:${RS}
     ${GREEN}-a <dir>${RS} Add dir to cache, or add PWD if dir is ommited.
@@ -29,6 +29,14 @@ ${YELLOW}ARGS:${RS}
 ${YELLOW}KEY BINDINGS:${RS}
     ${GREEN}ctrl-u${RS}   Deletes current line in fuzzy finder from cache.
     ${GREEN}ctrl-l${RS}   Toggles ls preview window.
+
+${YELLOW}ENVIRONMENT:${RS}
+    ${GREEN}K_TOGGLE_PREV${RS}   Set keyboard shortcut for ls preview toggle.
+                    Accepts any keyboard shortcut that is valid
+                    in FZF.
+    ${GREEN}K_REMOVE_ENTRY${RS}  Set keyboard shortcut for removal of directory
+                    from cache.
+
 EOF
   return 0
 }
