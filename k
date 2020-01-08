@@ -218,7 +218,7 @@ local toggle_preview="${K_TOGGLE_PREV}:toggle-preview"
 }
 # Next do prompt color
 
-local header="$(print -P '%F{$K_HEADER_BGCOLOR}\ue0b6%f%K{$K_HEADER_BGCOLOR}%F{$K_HEADER_FGCOLOR}%B%~%k%b%F{$K_HEADER_BGCOLOR}\ue0b4%f')"
+local header="$(print -P '%F{$K_HEADER_BGCOLOR}\ue0b6%f%K{$K_HEADER_BGCOLOR}%F{$K_HEADER_FGCOLOR}%Bpwd  %~%k%b%F{$K_HEADER_BGCOLOR}\ue0b4%f')"
 # -------------------------------------------------------------------
 
 # FZF Execution -----------------------------------------------------
