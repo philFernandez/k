@@ -1,3 +1,5 @@
+# TODO: use chpwd_functions to automatically collect visited directories
+
 local -A args_and_flags
 zparseopts -D -A args_and_flags -- a:: h f
 
