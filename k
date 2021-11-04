@@ -162,14 +162,14 @@ fi
 # FZF Options -------------------------------------------------------
 local preview
 if [[ ${+commands[lsd]} -eq 1 ]]; then
-  preview="eval lsd -A --color=always --icon=always --group-dirs first {}"
+  preview="eval lsd -A --color=always --icon=always --group-dirs first {}/"
 else
   case $(uname) in
     "Darwin")
-      preview="eval ls -F -A -G {}"
+      preview="eval ls -F -A -G {}/" # needs testing
       ;;
     "Linux")
-      preview="eval ls -A --color=auto --group-directories-first"
+      preview="eval ls -A --color=auto --group-directories-first {}/" # needs testing
       ;;
   esac
 fi
